@@ -1,0 +1,1 @@
+// Full application integration tests

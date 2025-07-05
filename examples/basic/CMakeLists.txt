@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(stylecpp_examples)
+set(CMAKE_CXX_STANDARD 20)
+include_directories(${CMAKE_SOURCE_DIR}/../../include)
+add_executable(hello_world hello_world.cpp)
+add_executable(real_world real_world.cpp)

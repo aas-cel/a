@@ -1,0 +1,7 @@
+{
+  "name": "stylecpp",
+  "version-string": "0.1.0",
+  "description": "Utility-first C++ terminal styling library inspired by TailwindCSS.",
+  "license": "MIT",
+  "dependencies": []
+}

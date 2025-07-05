@@ -1,84 +1,55 @@
+# StyleCPP
 
-Hello World Project
+A production-quality, utility-first C++ terminal and GUI styling library inspired by TailwindCSS. StyleCPP enables you to build beautiful, interactive, and extensible TUI/GUI applications with a modern, composable API.
 
-A CMake-based C/C++ project with basic and advanced examples.
+## Features
+- Utility-first styling: chainable, composable style utilities
+- Real components: Button, Input, Card, Table, ProgressBar, Spinner, Container, and more
+- Layouts: Container, Grid, Flex, Stack, Responsive
+- Theming: runtime theme switching, color palettes, typography
+- Backend abstraction: works with ANSI, ncurses, FTXUI, and extensible to ImGui/Qt
+- Event system: focus, keyboard, mouse, and custom events
+- Terminal detection and compatibility
+- Extensible: add your own components, utilities, and backends
+- Production-ready: tested, documented, CI/CD, packaging for vcpkg, conan, deb, rpm, conda
 
-Overview
+## Quick Start
 
-This project contains example programs demonstrating different levels of complexity:
-- `hello_world` - A basic "Hello World" program
-- `real_world` - A more complex real-world example
+```sh
+# Install dependencies (e.g. FTXUI, ncurses, etc.)
+# Build the project
+cmake -S . -B build
+cmake --build build
 
-Prerequisites
-
-- CMake 3.28 or higher
-- C/C++ compiler
-- Make build system
-
-Building the Project
-
-1. Create and navigate to build directory
-```bash
-mkdir build
-cd build
+# Run an example
+./build/examples/basic/real_world
 ```
 
-2. Generate build files
-```bash
-cmake ..
+## Example Usage
+
+```cpp
+#include <stylecpp/stylecpp.h>
+using namespace stylecpp;
+
+int main() {
+    Theme dark = { .primary = Color::Cyan, .background = Color::Black, .text = Color::White };
+    ThemeManager::setTheme(dark);
+    auto btn = make_button("Click Me").color(dark.text).bg(dark.primary).padding(2);
+    std::cout << btn->render() << std::endl;
+}
 ```
 
-3. Build the project
-```bash
-make
-```
+## Components
+- Button, Input, Card, Table, ProgressBar, Spinner, Container, Grid, Flex, Modal, List, NavigationBar, etc.
 
-Available Targets
+## Backends
+- Terminal (ANSI), ncurses, FTXUI (TUI/GUI), ImGui/Qt (planned)
 
-Main Targets
-- `make all` (default) - Build all targets
-- `make hello_world` - Build the basic hello world program
-- `make real_world` - Build the advanced example program
+## Documentation
+- See `docs/` for API, guides, and advanced usage.
 
-Utility Targets
-- `make clean` - Remove built files
-- `make rebuild_cache` - Regenerate CMake cache
-- `make help` - Show available targets
+## Contributing
+Pull requests, issues, and feature requests are welcome! See `CONTRIBUTING.md`.
 
-Usage
-
-After building, you can run the executables:
-
-```bash
-# Run hello world example
-./hello_world
-
-# Run real world example  
-./real_world
-```
-
-Development
-
-To rebuild after making changes:
-```bash
-make
-```
-
-To clean and rebuild everything:
-```bash
-make clean
-make
-```
-
-Project Structure
-```
-.
-├── CMakeLists.txt
-├── examples/
-│   └── basic/
-├── build/          # Generated build files
-└── README.md
-```
-```
-
-This README provides a clear overview of the project, build instructions, available targets, and usage information based on what I could infer from your Makefile.
+## License
+MIT
