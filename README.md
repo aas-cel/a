@@ -1,51 +1,51 @@
-```markdown
-# Hello World Project
+
+Hello World Project
 
 A CMake-based C/C++ project with basic and advanced examples.
 
-## Overview
+Overview
 
 This project contains example programs demonstrating different levels of complexity:
 - `hello_world` - A basic "Hello World" program
 - `real_world` - A more complex real-world example
 
-## Prerequisites
+Prerequisites
 
 - CMake 3.28 or higher
 - C/C++ compiler
 - Make build system
 
-## Building the Project
+Building the Project
 
-### 1. Create and navigate to build directory
+1. Create and navigate to build directory
 ```bash
 mkdir build
 cd build
 ```
 
-### 2. Generate build files
+2. Generate build files
 ```bash
 cmake ..
 ```
 
-### 3. Build the project
+3. Build the project
 ```bash
 make
 ```
 
-## Available Targets
+Available Targets
 
-### Main Targets
+Main Targets
 - `make all` (default) - Build all targets
 - `make hello_world` - Build the basic hello world program
 - `make real_world` - Build the advanced example program
 
-### Utility Targets
+Utility Targets
 - `make clean` - Remove built files
 - `make rebuild_cache` - Regenerate CMake cache
 - `make help` - Show available targets
 
-## Usage
+Usage
 
 After building, you can run the executables:
 
@@ -57,7 +57,7 @@ After building, you can run the executables:
 ./real_world
 ```
 
-## Development
+Development
 
 To rebuild after making changes:
 ```bash
@@ -70,7 +70,7 @@ make clean
 make
 ```
 
-## Project Structure
+Project Structure
 ```
 .
 ├── CMakeLists.txt
