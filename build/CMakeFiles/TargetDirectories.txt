@@ -1,0 +1,6 @@
+/workspaces/a/build/CMakeFiles/edit_cache.dir
+/workspaces/a/build/CMakeFiles/rebuild_cache.dir
+/workspaces/a/build/examples/basic/CMakeFiles/hello_world.dir
+/workspaces/a/build/examples/basic/CMakeFiles/real_world.dir
+/workspaces/a/build/examples/basic/CMakeFiles/edit_cache.dir
+/workspaces/a/build/examples/basic/CMakeFiles/rebuild_cache.dir
